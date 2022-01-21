@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.TituloDaFerramenta {
+    font-size: 72px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #0C58D3;
+}
+
+.Negrito {
+    font-weight: bold;
+}
+
+.row{
+    border-radius: 17px
+    
+}
+
+
+
+.TituloCard {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.025em;
+}
+
+.itens {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.008em;
+    
+}
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    
+}
+
+#listadetarefas button img{
+    width: 100%;
+    height: 100%;
+
+}
+#listadetarefas button{
+    width: min-content;
+    height: min-content;
+
+}
+.textotarefa{
+    margin-right: 100px;
+    font-size: 20px;
+    
+    
+}
+.conteinerbtn{
+    display: flex;
+    flex-wrap:nowrap;
+}
+button{
+    
+    background-color: transparent;
+    border: 0;
+}
+.card-body{
+    
+    flex-wrap: nowrap;
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+
