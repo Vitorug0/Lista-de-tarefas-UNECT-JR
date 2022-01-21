@@ -37,11 +37,11 @@ function criartagli(tarefa) {
     
     var btnexluir = document.createElement('button')
     btnexluir.classList.add('btnacao')
-    btnexluir.innerHTML = `<img src="negativ.png " alt=" negativo">`
+    btnexluir.innerHTML = `<img src="Imagens/negativ.png " alt=" negativo">`
     btnexluir.setAttribute('onclick', 'excluir('+tarefa.id+')')
 
     btnfazer.classList.add('btnacao')
-    btnfazer.innerHTML = `<img src="seta.png "alt="seta">`
+    btnfazer.innerHTML = `<img src="Imagens/seta.png "alt="seta">`
     btnfazer.setAttribute('onclick','passar('+tarefa.id+')')
 
 
