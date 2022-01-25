@@ -25,7 +25,7 @@
 
             </div>
             <div class="col text-end" style="margin-top: 50px ;">
-                <button type="button"><img src="Imagens/Vector.png" alt="engrenagem"></button>
+                <button class="btnconfig" onclick="acaomodal()" type="button"><img src="Imagens/Vector.png" alt="engrenagem"></button>
             </div>
         </div>
     </div>
@@ -40,10 +40,10 @@
                     <div class="col">
                         <div class="row">
                             <div  class="col col-md-15">
-                                <input id="novatarefa" class="form-control form-control-md shadow p-3 mb-5 bg-body" type="text" style=" border-radius: 17px " placeholder="Adicionar tarefa... " aria-label="Adicionar tarefa... ">
+                                <input id="inputNovaTarefa" class="form-control form-control-md shadow p-3 mb-5 bg-body" type="text" style=" border-radius: 17px " placeholder="Adicionar tarefa... " aria-label="Adicionar tarefa... ">
                             </div>
                             <div  class="col col-md-1 ">
-                                <button id="btnaddtarefa" type="button "><img src="Imagens/ADD.png" alt="botao "></button>
+                                <button id="buttonNovaTarefa" type="button "><img src="Imagens/ADD.png" alt="botao "></button>
                             </div>
                         </div>
                     </div>
@@ -66,24 +66,14 @@
                 </div>
                 <div class="card-body ">
                     <div class="itens ">
-                        <ul id="listatarefas" class="list-group list-group-flush ">
-                            <li>
-                                <span class="textotarefa"></span>
-                                <div class="conteinerbtn">
-                                    <button id="btnfazer"></button>
-                                    <button id="btnexluir"></button>
-                                </div>
-
-                            </li>
-
-                        </ul>
+                        <ul id="cardToDo" class="list-group list-group-flush "></ul>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3 ">
-            <div class="card ">
+            <div class="card">
                 <div class="card-text ">
                     <div class="text-lg-center ">
                         <span class="TituloCard ">Doing</span>
@@ -91,16 +81,7 @@
                 </div>
                 <div class="card-body ">
                     <div class="itens ">
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item ">
-                                <span class="textotarefa">fazer compras</span> 
-                                <div class="conteinerbtn">
-                                    <button type="button " ><img src="Imagens/certo.png" alt="seta "></button>
-                                    <button type="button "><img src="Imagens/negativ.png" alt="negativo "></button>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <ul id="cardDoing" class="list-group list-group-flush "></ul>
                     </div>
                 </div>
             </div>
@@ -117,25 +98,31 @@
                 </div>
                 <div class="card-body ">
                     <div class="itens ">
-                        <ul class="list-group list-group-flush ">
-                            <li class="list-group-item ">
-                                <span class="textotarefa">fazer compras</span>  
-                                <div class="conteinerbtn">
-                                    <button type="button "><img src="Imagens/turn.png" alt="seta "></button>
-                                    <button type="button "><img src="Imagens/negativ.png" alt="negativo "></button>
-                                </div>
-                            </li>
-                        </ul>
+                        <ul id="cardDone" class="list-group list-group-flush "></ul>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="col "></div>
     </div>
+    <div class="Modal">
+        <button onclick="fecharmodal()" id="btnfechar"><img src="Imagens/x.png" alt="X">
+        </button>
+        <h1 class="config">Configuração</h1>
+        <div class="row " style="margin-top: 50px "></div>
+        <p style="font-family: Arial; font-size: 20px; position: absolute; left: 100px;"><strong>Dark mode</strong></p>
+        <div class="darkmode">
+            <input onclick="fecharmodal()" type="checkbox" id="btndark" name="btndark">
+            <label for="btndark"><img src="Imagens/dark.png" alt="dark"></label>
+        </div>
+        <div class="row " style="margin-top: 50px "></div>
+        <img style="position: absolute;width: 400px; left: 15%;" src="Imagens/Vetor 1.png" alt="">
+        <div class="row " style="margin-top: 20px "></div>
+        <p style="font-family: Arial; font-size: 20px; position: absolute; left: 100px;"><strong>Plano de fundo</strong></p>
+    </div>
 
-
-
-
+    
     <script src="script.js "></script>
 </body>
 
