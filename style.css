@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Corpo da pagina e dark mode*/
 body{
     background-color:white;
     transition: background 0.5s linear color 0.5s linear;
@@ -31,7 +32,8 @@ body.dark label{
 #btndark{
     visibility: hidden;
 }
-
+/*--------------------------------------------*/
+/*Estrutura da pagina, estilo e localização dos cards e elementos*/
 .TituloDaFerramenta {
     font-size: 72px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -61,11 +63,6 @@ body.dark label{
 
 }
 
-button{
-    
-    background-color: transparent;
-    border: 0;
-}
 .card-body{
     
     flex-wrap: nowrap;
@@ -73,7 +70,8 @@ button{
     min-width: 500px;
     display: flex;
 }
-
+/*--------------------------------------------*/
+/*Modal e botões*/
 .Modal{
     position: absolute;
     width: 600px;
@@ -97,10 +95,15 @@ button{
   border: 0;
 
 }
+button{
+    
+    background-color: transparent;
+    border: 0;
+}
 .config{
     text-align: center;
 }
-
+/*--------------------------------------------*/
 
 
 

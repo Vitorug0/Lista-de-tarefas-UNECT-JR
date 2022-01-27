@@ -1,5 +1,5 @@
-let rootElement = document.getElementById('root')
-
+//-------------------------------------------------------------
+//Criação de variaveis
 let inputNovaTarefa = document.getElementById("inputNovaTarefa")
 let buttonNovaTarefa = document.getElementById("buttonNovaTarefa")
 
@@ -12,22 +12,24 @@ let listaDone = {nome: "listaDone", proximo: "listaToDo", ImagemBotao: "Imagens/
 let listaToDo = {nome: "listaToDo", proximo: "listaDoing", ImagemBotao: "Imagens/seta.png", itens: []}
 
 let qtdTarefas = 0
-
+//-------------------------------------------------------------
+// Renderizando as tarefas na tela e relacionando listas com os cards referentes
 let relacionamentoListaComCard = [
     {lista: listaToDo, card: cardToDo},
     {lista: listaDoing, card: cardDoing},
     {lista: listaDone, card: cardDone}
 ]
 
-const renderizarTela = () => {
+function renderizarTela(){
     relacionamentoListaComCard.forEach(
         relacionamento => {
             renderizarLista(relacionamento.lista, relacionamento.card)
         }
     )
 }
-
-const moverParaLista = (item, origem, destino) => {
+//-------------------------------------------------------------
+//Funções de excluir, adicionar e mover tarefas entre os cards
+function moverParaLista (item, origem, destino){
     let itemAtual = encontrarItem(item, origem)
     excluir(item, origem)
     adicionarItem(itemAtual, destino)
@@ -35,22 +37,23 @@ const moverParaLista = (item, origem, destino) => {
     renderizarTela()
 }
 
-const excluir = (item, lista) => {
+function excluir (item, lista){
     let itemAtual = encontrarItem(item, lista)
     lista.itens.splice(lista.itens.indexOf(itemAtual), 1)
     
     renderizarTela()
 }
 
-const adicionarItem = (item, lista) => {
+function adicionarItem (item, lista) {
     lista.itens.push(item)
 }
 
 const encontrarItem = (id, lista) => (
     lista.itens.find(item => item.id == id)
 )
-
-const renderizarLista = (lista, card) => {
+//-------------------------------------------------------------
+//Rederizando na tela, juntamente com os estilos
+function renderizarLista(lista, card){
     let htmlGerado = ""
     lista.itens.forEach(
         tarefa => {
@@ -69,7 +72,8 @@ const renderizarLista = (lista, card) => {
 }
 
 renderizarTela()
-
+//----------------------------------------------------------
+// evento de click para adicionar as tarefas nos cards
 buttonNovaTarefa.addEventListener('click', (e) => {
     if (inputNovaTarefa.value == "") return;
 
@@ -85,22 +89,16 @@ buttonNovaTarefa.addEventListener('click', (e) => {
 })
 
 //----------------------------------------------------------  
-
-//----------------------------------------------------------
 //Ação de abrir o modal   
 function acaomodal(){
     let modal = document.querySelector('.Modal')
-    modal.style.display='block'
-    
-
-    
+    modal.style.display='block'    
 }
 function fecharmodal(){
     let modal = document.querySelector('.Modal')
     modal.style.display='none'
 }
 //----------------------------------------------------------
-
 //Ação de colocar em dark mode
 let btn = document.getElementById("btndark")
 
